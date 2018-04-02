@@ -1,0 +1,460 @@
+var a ;
+undefined
+typeof a;
+"undefined"
+a=100;
+100
+typeof a;
+"number"
+a=1;
+1
+typeof a;
+"number"
+a=1000000;
+1000000
+typeof a;
+"number"
+a=100.20;
+100.2
+typeof a;
+"number"
+a='Amit';
+"Amit"
+typeof a;
+"string"
+a="Amit";
+"Amit"
+typeof a;
+"string"
+a="Let's Code It";
+"Let's Code It"
+a=true;
+true
+a="Let's Code It";
+"Let's Code It"
+a=true;
+true
+typeof a;
+"boolean"
+a=100;
+100
+typeof a;
+"number"
+a=100/0;
+Infinity
+typeof a;
+"number"
+a=100/"amit";
+NaN
+typeof a;
+"number"
+a= {};
+{}
+typeof a;
+"object"
+a instanceof Object;
+true
+typeof Object;
+"function"
+a = {id:1001, name:'Amit'};
+{id: 1001, name: "Amit"}
+a.id;
+1001
+a.city='Delhi';
+"Delhi"
+a;
+{id: 1001, name: "Amit", city: "Delhi"}
+delete a.id;
+true
+a;
+{name: "Amit", city: "Delhi"}
+function add(x,y){
+return x + y;
+}
+undefined
+typeof add;
+"function"
+add(100,200);
+300
+var e = add;
+undefined
+e;
+ƒ add(x,y){
+return x + y;
+}
+typeof e;
+"function"
+e(100,200);
+300
+function evenodd(num){
+return num%2==0?"EvenNo "+num:" Odd No "+num;
+}
+undefined
+evenodd(2);
+"EvenNo 2"
+evenodd(3);
+" Odd No 3"
+function cube(a){
+return a*a*a;
+}
+undefined
+cube(3);
+27
+function loop(fn){
+for(let i = 1; i<=10 ; i++){
+fn(i);
+
+}
+}
+undefined
+loop(evenodd);
+undefined
+function loop(fn){
+for(let i = 1; i<=10 ; i++){
+console.log(fn(i));
+
+}
+}
+undefined
+loop(evenodd);
+VM1561:3  Odd No 1
+VM1561:3 EvenNo 2
+VM1561:3  Odd No 3
+VM1561:3 EvenNo 4
+VM1561:3  Odd No 5
+VM1561:3 EvenNo 6
+VM1561:3  Odd No 7
+VM1561:3 EvenNo 8
+VM1561:3  Odd No 9
+VM1561:3 EvenNo 10
+undefined
+loop(cube);
+VM1561:3 1
+VM1561:3 8
+VM1561:3 27
+VM1561:3 64
+VM1561:3 125
+VM1561:3 216
+VM1561:3 343
+VM1561:3 512
+VM1561:3 729
+VM1561:3 1000
+undefined
+function loop(fn){
+for(let i = 1; i<=10 ; i++){
+if(typeof fn=="function"){
+console.log(fn(i));
+}
+}
+
+}
+undefined
+loop(cube);
+VM1775:4 1
+VM1775:4 8
+VM1775:4 27
+VM1775:4 64
+VM1775:4 125
+VM1775:4 216
+VM1775:4 343
+VM1775:4 512
+VM1775:4 729
+VM1775:4 1000
+undefined
+loop("amit");
+undefined
+"amit"()
+VM1818:1 Uncaught TypeError: "amit" is not a function
+    at <anonymous>:1:7
+(anonymous) @ VM1818:1
+loop("function");
+undefined
+var a = 100;
+undefined
+var b = "100";
+undefined
+a==b;
+true
+a===b;
+false
+function loop(fn){
+for(let i = 1; i<=10 ; i++){
+if(typeof fn==="function"){
+console.log(fn(i));
+}
+}
+
+}
+undefined
+var t = [10,20,30,40,50];
+undefined
+typeof t;
+"object"
+t instanceof Array;
+true
+typeof Array;
+"function"
+t;
+(5) [10, 20, 30, 40, 50]
+t.push(100);
+6
+t;
+(6) [10, 20, 30, 40, 50, 100]
+t.splice(1,2)
+(2) [20, 30]
+t;
+(4) [10, 40, 50, 100]
+t;
+(4) [10, 40, 50, 100]
+t.length=0;
+0
+t;
+[]
+var t = [10,20,30,40,50];
+undefined
+var [x,,y,z] = t;
+undefined
+x;
+10
+y;
+30
+z;
+40
+var a = 10;
+undefined
+var b = 20;
+undefined
+[a,b] = [b,a];
+(2) [20, 10]
+a;
+20
+b;
+10
+var emp = {id:1001,name:'Ram',salary:9000};
+undefined
+emp;
+{id: 1001, name: "Ram", salary: 9000}
+var {id,name} = emp;
+undefined
+id;
+1001
+name;
+"Ram"
+function printObject({id,name}){
+console.log(`Id is ${id} and Name is ${name}`);
+}
+undefined
+printObject(emp);
+VM2793:2 Id is 1001 and Name is Ram
+undefined
+function add(){
+console.log("Add is Called ");
+}
+undefined
+add();
+VM2958:2 Add is Called 
+undefined
+add(100,200);
+VM2958:2 Add is Called 
+undefined
+add(10,20,30,40,50);
+VM2958:2 Add is Called 
+undefined
+add(100,"200",[90,100],{id:1001,name:'Ram'},function(){
+});
+VM2958:2 Add is Called 
+undefined
+console.dir(add);
+VM3105:1 ƒ add()arguments: nullcaller: nulllength: 0name: "add"prototype: {constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]: VM2958:1[[Scopes]]: Scopes[1]
+undefined
+function jQuery(){
+}
+undefined
+var $ = jQuery;
+undefined
+typeof $;
+"function"
+document;
+#document
+typeof document;
+"object"
+function add(){
+console.log(`Arguments are ${arguments.length}`);
+}
+undefined
+add()
+VM3619:2 Arguments are 0
+undefined
+add(10,20)
+VM3619:2 Arguments are 2
+undefined
+add(100,"200",[90,100],{id:1001,name:'Ram'},function(){
+});
+VM3619:2 Arguments are 5
+undefined
+function add(){
+//console.log(`Arguments are ${arguments.length}`);
+var sum = 0;
+for(let i =0 ; i<arguments.length; i++){
+sum += arguments[i]);
+}
+return sum;
+}
+VM3699:5 Uncaught SyntaxError: Unexpected token )
+function add(){
+//console.log(`Arguments are ${arguments.length}`);
+var sum = 0;
+for(let i =0 ; i<arguments.length; i++){
+sum += arguments[i];
+}
+return sum;
+}
+undefined
+add();
+0
+add(10,20);
+30
+add(10,20,30,40,50,60);
+210
+add(10,20,30,40,50,60,"100");
+"210100"
+function add(){
+//console.log(`Arguments are ${arguments.length}`);
+var sum = 0;
+for(let i =0 ; i<arguments.length; i++){
+sum += parseInt(arguments[i]);
+}
+return sum;
+}
+undefined
+add(10,20,30,40,50,60,"100");
+310
+add(10,20,30,40,50,60,"100","amit");
+NaN
+"200"+200;
+"200200"
+parseInt("200")+200;
+400
+parseInt("amit")+200;
+NaN
+"200"+200;
+"200200"
+"200"-200;
+0
+"amit"-"srivastava"
+NaN
+add(10,20,30,40,50,60,"100","amit");
+NaN
+parseInt("amit");
+NaN
+isNaN(parseInt("amit"));
+true
+function add(){
+//console.log(`Arguments are ${arguments.length}`);
+var sum = 0;
+for(let i =0 ; i<arguments.length; i++){
+sum += isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]);
+}
+return sum;
+}
+undefined
+add(10,20,30,40,50,60,"100","amit");
+310
+function firstNumber(){
+return 1000;
+}
+undefined
+var w = function(){
+return 2000;
+}
+undefined
+typeof w;
+"function"
+function Outer(){
+if(10>2){
+//var m= 100;
+//return m;
+var w = function(){
+return "W ";
+}
+return w;
+}
+}
+undefined
+var t = Outer();
+undefined
+t;
+ƒ (){
+return "W ";
+}
+var w = function(){
+return 2000;
+}
+undefined
+w;
+ƒ (){
+return 2000;
+}
+var w = function GGG(){
+return 2000;
+}
+undefined
+w;
+ƒ GGG(){
+return 2000;
+}
+var g = w();
+undefined
+g;
+2000
+typeof w;
+"function"
+w;
+ƒ GGG(){
+return 2000;
+}
+var w = (a,b)=>a+b;
+undefined
+w;
+(a,b)=>a+b
+typeof w;
+"function"
+w(100,200);
+300
+var w = (a,b)=>{
+console.log(`Inside Arrow A is ${a} and B is ${b}`);
+return a+b;
+}
+undefined
+w(1000,2000);
+VM4842:2 Inside Arrow A is 1000 and B is 2000
+3000
+add;
+ƒ add(){
+//console.log(`Arguments are ${arguments.length}`);
+var sum = 0;
+for(let i =0 ; i<arguments.length; i++){
+sum += isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]);
+}
+return sum;
+}
+add(()=>1000,()=>2000,10,20);
+30
+function add(){
+//console.log(`Arguments are ${arguments.length}`);
+var sum = 0;
+for(let i =0 ; i<arguments.length; i++){
+if(typeof arguments[i]==="function"){
+arguments[i] = arguments[i]();
+}
+sum += isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]);
+}
+return sum;
+}
+undefined
+add(()=>1000,()=>2000,10,20);
+3030
+add(()=>1000,()=>2000,10,20,()=>"1000");
+4030
+add(()=>1000,()=>2000,10,20,()=>"1000",()=>"Amit");
+4030
