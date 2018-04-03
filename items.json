@@ -1,0 +1,3 @@
+{
+    "items": [{ "id": "1001", "name": "abcd", "price": "501", "color": "#5df3e3", "date": "2018-04-04", "desc": "abcd", "url": "abcd.com", "markForDelete": false }, { "id": "1002", "name": "abcd", "price": "501", "color": "#5df3e3", "date": "2018-04-04", "desc": "abcd", "url": "abcd.com", "markForDelete": false }, { "id": "1003", "name": "abcd", "price": "501", "color": "#5df3e3", "date": "2018-04-04", "desc": "abcd", "url": "abcd.com", "markForDelete": false }]
+}
