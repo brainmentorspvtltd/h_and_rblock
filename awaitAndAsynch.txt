@@ -1,0 +1,11 @@
+async function cubeAfter3sec(num){
+var pr = new Promise((resolve,reject)=>{
+setTimeout(()=>resolve(num*num*num),3000);
+});
+return pr;
+}
+async function sumOfAllCube(){
+return await cubeAfter3sec(3) + await cubeAfter3sec(2) + await cubeAfter3sec(5);
+}
+sumOfAllCube().then(sum=>console.log("Sum is"+sum));
+
