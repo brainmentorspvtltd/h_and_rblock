@@ -1,0 +1,17 @@
+var pr = new Promise((res,rej)=>{
+setTimeout(()=>res("Hello Promise 1"),5000);
+})
+var pr2 = new Promise((res,rej)=>{
+setTimeout(()=>res(“Hello Promise 2"),7000);
+})
+var pr3 = new Promise((res,rej)=>{
+setTimeout(()=>res(“Hello Promise 3"),3000);
+})
+Promise.all([pr,pr2,pr3]).then(value=>{
+for(let p of value){
+console.log("Promise :::: ",p);
+}
+//console.log("Promise.... ",value);
+}).catch(err=>{
+console.log("Error is :::: ",err);
+});
