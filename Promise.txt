@@ -1,0 +1,7 @@
+var pr = new Promise((resolve,reject)=>{
+setTimeout(()=>{
+console.log("I will Call After 3 Sec ");
+resolve( "Hello I am TimeOut Result ");
+},3000);
+});
+pr.then(data=>console.log("Result is "+data)).catch(err=>console.log("Error is "+err));
