@@ -1,0 +1,17 @@
+<!-- <h1> {{title}}</h1>
+
+<div [hidden]="flag">
+    Just Hide it
+</div>
+<button (click)="changePrice()" [disabled]="flag">Login</button>
+<p [innerHTML]="title"></p>
+<h3 [class]="myclass">Price is {{price}}</h3>
+<input type="text" (keyup)="takeInput($event)"> {{msg2}} -->
+<h1>{{title}}</h1>
+<input type="text" (keyup)="takeSalary($event)" placeholder="Type Basic Salary Here">
+<p>Basic Salary is {{salary}}</p>
+<button (click)="printIt()">Compute</button>
+<div>
+    hra {{object.hra()}} da {{object.da()}} ta {{object.ta()}} pf {{object.pf()}} gs {{object.gs()}}
+    <p [ngClass]="{'red':object.tax()>=30,'orange':object.tax()<30 && object.tax()>=20}">tax {{object.tax()}}</p> ns {{object.ns()}}
+</div>
