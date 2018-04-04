@@ -1,0 +1,14 @@
+<div>
+    <h2 [ngStyle]="{'background-color':balance>5000?'red':'yellow'}">{{msg}}</h2>
+</div>
+Balance is {{balance|currency:'INR':true:'2.2-4'}}
+<ul>
+    <li *ngFor="let fruit of fruits;let i=index">
+        <strong *ngIf="fruit=='apple'">
+        {{i+1}} &nbsp; {{fruit|uppercase}}
+      </strong>
+        <p *ngIf="fruit!=='apple'">
+            {{i+1}} &nbsp; {{fruit|titlecase}}
+        </p>
+    </li>
+</ul>
