@@ -1,0 +1,9 @@
+<h1> {{title}}</h1>
+
+<div [hidden]="flag">
+    Just Hide it
+</div>
+<button (click)="changePrice()" [disabled]="flag">Login</button>
+<p [innerHTML]="title"></p>
+<h3 [class]="myclass">Price is {{price}}</h3>
+<input type="text" (keyup)="takeInput($event)"> {{msg2}}
