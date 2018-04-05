@@ -1,0 +1,16 @@
+Child to Parent call
+1. Parent Pass the Custom event to the child
+this custom event has the function of a parent
+<child-comp (passToChild)="callByChild($event)”>
+In this case passToChild is a custom event
+
+2. Parent has to define e.g callByChild function, this
+function is going to be call by the child.
+
+3. Child Rec the Event in @Output Decorator
+@Output()
+  passToChild:EventEmitter<string> = new EventEmitter<string>();
+It must be of EventEmitter type
+
+4. Fire the Event from a child 
+passToChild.emit(Somevalue);
